@@ -4,91 +4,91 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Icohedron's Developer Site">
-    <meta name="author" content="Icohedron">
-    <link rel="icon" href="res/icosahedron%20(transparent)%20favicon.ico">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="res/icosahedron%20favicon.ico">
 
-    <title>Icohedron's Developer Site</title>
+    <title>Icohedron - Main</title>
 
+    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/main.css" rel="stylesheet">
-
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </head>
-
+    
   <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Icohedron's Developer Site</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">Icohedron's Developer Site</h3>
       </div>
+    </div>
 
-      <div class="jumbotron">
-        <h1>Hello!</h1>
-        <p class="lead">Welcome to Icohedron's developer site! Here, you will be able to find updates as to what I have been doing lately.</p>
-        <img src="http://icosahedron.de/icosahedron.png" width="269" height="250"></img>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Hello There!</h1>
+              <p>I'm Icohedron. Welcome to my developer site. Have fun browsing!</p>
+              <img src="res/Icosahedron%20(with%20lighting).png" width="215" height="200">
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <div class="row marketing">
-       <!-- <div class="col-lg-6"> -->
-            
-          <!-- Events here -->
-          
-            <h4>A Cube made with Dart + WebGL</h4>
-            <p>A rendering of a cube made in <a href="http://blender.org">Blender</a> using Dart + WebGL.</p>
-            <h5><a href="subdivisions/webgl-cube/webgl.html" target="_blank">See it live! (Opens a new tab.)</a></h5>
-            <img src="res/webgl-cube.png" width="400" height="300">
-            <p>2014-09-21</p>
-            
-            <h4>Internet Relay Chat project using JavaFX</h4>
-            <p>This is my first Java application to utilize lambda expressions, multithreading, and networking!</p>
-            <p>It utilizes the User Datagram Protocal (UDP), as it is slightly easier to use and it is what most video games use for multiplayer. </p>
-            <h5><a href="https://github.com/Icohedron/Icohedron-NetChat">Download & Source @ Github</a></h5>
-            <img src="res/net-chat-login.png" width=225 height=300>
-            <img src="res/net-chat-client.png" width=400 height=300>
-            <p>2014-08-31</p>
-          
-            <h4>My first game made with pure OpenGL, Pong!</h4>
-            <p>Features no sound, no score-keepng, but endless hours of boring!<br>Used <a href="http://lwjgl.org/">LWJGL</a> to access OpenGL (which is written in C). <a href="http://lwjgl.org/">LWJGL</a> is NOT a game engine. I had to write my own!</p>
-            <p>And yes, I did learn about vectors, matrices, and matrix transformations to fully understand how OpenGL works.</p>
-            <h5><a href="https://github.com/Icohedron/OpenGL-Pong">Download & Source here @ Github</a></h5>
-            <img src="res/pong-screenshot.png" width=400 height=300>
-            <p>2014-08-25</p>
-            
-            <h4>Android Game: Block Bunny!</h4>
-            <p>My own replica of <a href="https://www.youtube.com/playlist?list=PL-2t7SM0vDfdYJ5Pq9vxeivblbZuFvGJK">this</a> using <a href="http://libgdx.badlogicgames.com/">LibGDX</a> (a sort of half-engine and half-library).</p>
-            <h5><a href="https://github.com/Icohedron/LibGDX-Block-Bunny">Download & Source (Android and Desktop) @ Gtihub</a></h5>
-            <img src="res/block-bunny-screenshot.png" width=400 height=300>
-            <p>2014-08-12</p>
-            
-            <h4>My first Android app!</h4>
-            <p>Only for temperature conversions.</p>
-            <h5><a href="https://github.com/Icohedron/Temperature-Conversion-App">Download Only @ Github</a></h5>
-            <img src="res/temp-app.png" width=400 height=640>
-            <p>2014-08-05</p>
-            
-            <h4>A text-editor made with <a href="http://www.oracle.com/technetwork/java/javase/overview/javafx-overview-2158620.html">JavaFX</a></h4>
-            <p>Can read, write and overwrite files.</p>
-            <h5><a href="https://github.com/Icohedron/JFX-Text-Editor">Download & Source @ Github</a></h5>
-            <img src="res/text-editor-screenshot.png" width=400 height=300>
-            <p>2013-01-17</p>
-            
-      <!--  </div> -->
+    </div>
+
+    <div class="container marketing">
+
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" style="width: 140px; height: 140px;">
+          <h2>GitHub</h2>
+          <p>View my GitHub repositories!</p>
+          <p><a class="btn btn-default" href="https://github.com/icohedron" role="button">Take me there now! &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="res/b-icon.png" style="width: 140px; height: 140px;">
+          <h2>Blog</h2>
+          <p>View my blog!</p>
+          <p><a class="btn btn-default" href="blog.html" role="button">Take me there now! &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://pbs.twimg.com/profile_images/378800000452234975/1705c8e851108a4d02053888595126b5_400x400.png" style="width: 140px; height: 140px;">
+          <h2>Ludum Dare</h2>
+          <p>See my Ludum Dare entries!</p>
+          <p><a class="btn btn-default" href="http://www.ludumdare.com/compo/" role="button">Coming Soon!</a></p>
+        </div>
       </div>
+    </div>
 
-      <div class="footer">
-        <p>&copy; Icohedron 2014</p>
-      </div>
-
-    </div> 
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

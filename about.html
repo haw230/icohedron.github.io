@@ -4,43 +4,67 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Icohedron's Developer Site">
-    <meta name="author" content="Icohedron">
-    <link rel="icon" href="res/icosahedron%20(transparent)%20favicon.ico">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="res/icosahedron%20favicon.ico">
 
-    <title>Icohedron's Developer Site</title>
+    <title>Icohedron - About</title>
 
+    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/main.css" rel="stylesheet">
-
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </head>
-
+    
   <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Icohedron's Developer Site</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="#">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">Icohedron's Developer Site</h3>
       </div>
+    </div>
 
-      <div class="jumbotron">
-        <h2>This a personal website for my own use.</h2>
-        <p class="lead">I used HTML, CSS, and <a href="http://getbootstrap.com">Bootstrap</a> to make this site.<br>My IDE of choice was <a href="http://brackets.io">Brackets</a>.</p>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>About</h1>
+              <p>So you want to know who I am? Well, it's simple; I'm a 14 year old High School student known by the name of "Icohedron". I love to program in my spare time.</p>
+              <img src="res/Icosahedron%20(with%20lighting).png" width="215" height="200">
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="footer">
-        <p>&copy; Icohedron 2014</p>
-      </div>
-
-    </div> 
-
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
