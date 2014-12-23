@@ -2,127 +2,23 @@
 
 <html>
 <head>
-  <title>3D Star Field</title>
-  <style>
-    canvas {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-    }
-  </style>
+  <title>StarField</title>
+
+  <!--Uncomment if displaying in non-fullscreen for the canvas to be centered-->
+
+  <!--<style>-->
+  <!--  canvas {-->
+  <!--    position: absolute;-->
+  <!--    left: 50%;-->
+  <!--    top: 50%;-->
+  <!--    margin-right: -50%;-->
+  <!--    transform: translate(-50%, -50%);-->
+  <!--  }-->
+  <!--</style>-->
 </head>
 
 <body>
-  <script>
-    var WIDTH = 800;
-    var HEIGHT = 600;
-
-    var canvas;
-    var context;
-    var pixels;
-
-    var spread;
-    var speed;
-    var numStars;
-
-    var fov = 70;
-
-    var starX;
-    var starY;
-    var starZ;
-
-    function main() {
-      canvas = document.createElement("canvas");
-      canvas.width = WIDTH;
-      canvas.height = HEIGHT;
-      context = canvas.getContext("2d");
-      pixels = context.createImageData(WIDTH, HEIGHT);
-      document.body.appendChild(canvas);
-
-      init();
-
-      var lastTime = Date.now();
-      var delta;
-
-      var loop = function() {
-        var now = Date.now();
-        delta = (now - lastTime) / 1000;
-        lastTime = now;
-
-        render(delta);
-
-        window.requestAnimationFrame(loop, canvas);
-      }
-
-      window.requestAnimationFrame(loop, canvas);
-    }
-
-    function init() {
-      spread = 64;
-      speed = 10;
-      numStars = 1024;
-
-      starX = [];
-      starY = [];
-      starZ = [];
-
-      for (var i = 0; i < numStars; i++) {
-        initStar(i);
-      }
-    }
-
-    function initStar(index) {
-      starX[index] = 2 * (Math.random() - 0.5) * spread;
-      starY[index] = 2 * (Math.random() - 0.5) * spread;
-      starZ[index] = (Math.random() + 0.00001) * spread;
-    }
-
-    function render(delta) {
-      clear(0, 0, 0, 255);
-
-      var halfWidth = WIDTH / 2;
-      var halfHeight = HEIGHT / 2;
-
-      for (var i = 0; i < numStars; i++) {
-        starZ[i] -= delta * speed;
-
-        if (starZ[i] <= 0) {
-          initStar(i);
-        }
-
-        var x = Math.floor((starX[i] / (Math.tan(fov / 2) * starZ[i])) * halfWidth + halfWidth);
-        var y = Math.floor((starY[i] / (Math.tan(fov / 2) * starZ[i])) * halfHeight + halfHeight);
-
-        if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT) {
-          initStar(i);
-        } else {
-          setPixel(x, y, 255, 255, 255, 255);
-        }
-      }
-
-      context.putImageData(pixels, 0, 0);
-    }
-
-    function clear(r, g, b, a) {
-      for (var i = 0; i < pixels.data.length; i += 4) {
-        pixels.data[i    ] = r;
-        pixels.data[i + 1] = g;
-        pixels.data[i + 2] = b;
-        pixels.data[i + 3] = a;
-      }
-    }
-
-    function setPixel(x, y, r, g, b, a) {
-      var index = (x + y * WIDTH) * 4;
-      pixels.data[index    ] = r;
-      pixels.data[index + 1] = g;
-      pixels.data[index + 2] = b;
-      pixels.data[index + 3] = a;
-    }
-
-    main();
-  </script>
+  <script src="js/starfield.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
