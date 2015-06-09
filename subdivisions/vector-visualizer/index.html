@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vector Visualizer</title>
+    <link rel="icon" type="image/png" href="http://www.faviconer.com/uploads/200/896/favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body onload="main()">
+    <div class="wrapper">
+        <canvas id="canvas" tabindex="1">HTML5 is not supported in your browser. Try updating it or switch to a different browser.</canvas>
+        <div class="tip">
+            <div class="container">
+                <h3>Uploading Files</h3>
+                <p>This web app supports triangulated .obj files.<br>
+                Simply drag and drop .obj files from your computer onto the interface to start the upload.</p>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="container">
+                <div class="separator">
+                    <h3>Vertices</h3>
+                    <textarea id="vertices" class="bigTextArea">
+                    </textarea>
+                </div>
+                <div class="separator">
+                    <h3>Indices</h3>
+                    <textarea id="indices" class="bigTextArea">
+                    </textarea>
+                </div>
+                <div class="separator">
+                    <h3>Transformations</h3>
+                    <p>Translation </p> <textarea id="translation" class="inlineTextArea" rows="1"></textarea> <br>
+                    <p>Scale </p> <textarea id="scale" class="inlineTextArea" rows="1"></textarea> <br>
+                    <p>Rotation </p> <textarea id="rotation" class="inlineTextArea" rows="1"></textarea> <br>
+                </div>
+                <div class="separator">
+                    <h3>Controls</h3>
+                    <p>Use WASD, Shift, and Space to move around the area.<br>
+                    Click and drag the cursor to look around.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="shader-vs" type="x-shader/x-vertex">
+        attribute vec3 vertexPosition;
+        
+        uniform mat4 mvMatrix;
+        uniform mat4 pMatrix;
+        
+        varying vec4 pColor;
+        
+        void main(void) {
+            gl_Position = pMatrix * mvMatrix * vec4(vertexPosition, 1.0);
+            pColor = vec4(clamp(vertexPosition, 0.0, 1.0), 1.0);
+        }
+    </script>
+    <script id="shader-fs" type="x-shader/x-fragment">
+        precision mediump float;
+        
+        uniform vec4 fColor;
+        uniform int usePositionColor;
+        
+        varying vec4 pColor;
+        
+        void main(void) {
+            if (usePositionColor == 1) {
+                gl_FragColor = pColor;
+            } else {
+                gl_FragColor = fColor;
+            }
+        }
+    </script>
+    <script src="js/vector-math.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
