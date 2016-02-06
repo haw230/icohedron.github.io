@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mastermind Hints</title>
+</head>
+<body>
+  <form>
+    <p>Combination:</p>
+    <select name="color" id="cFirst" onchange="update()">
+      <option value="none" selected>Color</option>
+      <option value="pink">Pink</option>
+      <option value="magenta">Magenta</option>
+      <option value="lime">Lime</option>
+      <option value="cyan">Cyan</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+    </select>
+    <select name="color" id="cSecond" onchange="update()">
+      <option value="none" selected>Color</option>
+      <option value="pink">Pink</option>
+      <option value="magenta">Magenta</option>
+      <option value="lime">Lime</option>
+      <option value="cyan">Cyan</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+    </select>
+    <select name="color" id="cThird" onchange="update()">
+      <option value="none" selected>Color</option>
+      <option value="pink">Pink</option>
+      <option value="magenta">Magenta</option>
+      <option value="lime">Lime</option>
+      <option value="cyan">Cyan</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+    </select>
+    <select name="color" id="cFourth" onchange="update()">
+      <option value="none" selected>Color</option>
+      <option value="pink">Pink</option>
+      <option value="magenta">Magenta</option>
+      <option value="lime">Lime</option>
+      <option value="cyan">Cyan</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+    </select>
+  </form>
+  <form>
+    <p>Guess:</p>
+    <select name="color" id="gFirst" onchange="update()">
+      <option value="none" selected>Color</option>
+      <option value="pink">Pink</option>
+      <option value="magenta">Magenta</option>
+      <option value="lime">Lime</option>
+      <option value="cyan">Cyan</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+    </select>
+    <select name="color" id="gSecond" onchange="update()">
+      <option value="none" selected>Color</option>
+      <option value="pink">Pink</option>
+      <option value="magenta">Magenta</option>
+      <option value="lime">Lime</option>
+      <option value="cyan">Cyan</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+    </select>
+    <select name="color" id="gThird" onchange="update()">
+      <option value="none" selected>Color</option>
+      <option value="pink">Pink</option>
+      <option value="magenta">Magenta</option>
+      <option value="lime">Lime</option>
+      <option value="cyan">Cyan</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+    </select>
+    <select name="color" id="gFourth" onchange="update()">
+      <option value="none" selected>Color</option>
+      <option value="pink">Pink</option>
+      <option value="magenta">Magenta</option>
+      <option value="lime">Lime</option>
+      <option value="cyan">Cyan</option>
+      <option value="red">Red</option>
+      <option value="orange">Orange</option>
+    </select>
+  </form>
+  <p id="result">Result: None (fill out the combination and guess fieldsets)</p>
+
+  <!-- Script Loading -->
+  <script src="clues.js"></script>
+</body>
+</html>
