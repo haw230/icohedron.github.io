@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mastermind Hints</title>
+</head>
+<body>
+  <form>
+    <p>Combination:</p>
+    <select name="block" id="cFirst" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="cSecond" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="cThird" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="cFourth" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="cFifth" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="cSixth" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+  </form>
+  <form>
+    <p>Guess:</p>
+    <select name="block" id="gFirst" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="gSecond" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="gThird" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="gFourth" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="gFifth" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+    <select name="block" id="gSixth" onchange="update()">
+      <option value="none" selected>Block</option>
+      <option value="emerald">Emerald</option>
+      <option value="gold">Gold</option>
+      <option value="iron">Iron</option>
+      <option value="quartz">Quartz</option>
+      <option value="coal">Coal</option>
+      <option value="diamond">Diamond</option>
+      <option value="redstone">Redstone</option>
+      <option value="lapis">Lapis</option>
+    </select>
+  </form>
+  <p id="result">Result: None (fill out the combination and guess fieldsets)</p>
+
+  <!-- Script Loading -->
+  <script src="clues.js"></script>
+</body>
+</html>
