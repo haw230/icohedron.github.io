@@ -4,7 +4,7 @@ var   GuessFieldset         =   [document.getElementById("gFirst"), document.get
 var   Result                =    document.getElementById("result");
 var   Num_Colors            =    8;
 
-function randomCombinationWithRepition() {
+function randomCombinationWithRepetition() {
   for (var i = 0; i < CombinationFieldset.length; i++) {
     CombinationFieldset[i].selectedIndex = Math.floor(Math.random() * CombinationFieldset.length + 2);
   }
@@ -12,7 +12,7 @@ function randomCombinationWithRepition() {
   update();
 }
 
-function randomCombinationNoRepition() {
+function randomCombinationNoRepetition() {
   var set = []
   for (var i = 1; i < Num_Colors + 1; i++) {
     set[i] = i;
