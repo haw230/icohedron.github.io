@@ -2,6 +2,33 @@
 var   CombinationFieldset   =   [document.getElementById("cFirst"), document.getElementById("cSecond"), document.getElementById("cThird"),  document.getElementById("cFourth"),  document.getElementById("cFifth"),  document.getElementById("cSixth")];
 var   GuessFieldset         =   [document.getElementById("gFirst"), document.getElementById("gSecond"), document.getElementById("gThird"),  document.getElementById("gFourth"),  document.getElementById("gFifth"),  document.getElementById("gSixth")];
 var   Result                =    document.getElementById("result");
+var   Num_Colors            =    8;
+
+function randomCombinationWithRepition() {
+  for (var i = 0; i < CombinationFieldset.length; i++) {
+    CombinationFieldset[i].selectedIndex = Math.floor(Math.random() * CombinationFieldset.length + 2);
+  }
+
+  update();
+}
+
+function randomCombinationNoRepition() {
+  var set = []
+  for (var i = 1; i < Num_Colors + 1; i++) {
+    set[i] = i;
+  }
+
+  for (var i = 0, index = set.length - 1; i < CombinationFieldset.length; i++, index--) {
+    var randInd = Math.floor(Math.random() * index + 1);
+    CombinationFieldset[i].selectedIndex = set[randInd];
+    // Swap the two values
+    set[index]    = set[randInd] ^ set[index];
+    set[randInd]  = set[randInd] ^ set[index];
+    set[index]    = set[randInd] ^ set[index];
+  }
+
+  update();
+}
 
 function getClues(combination, guess) {
   var reds = 0;
