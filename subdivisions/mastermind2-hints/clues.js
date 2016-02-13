@@ -45,6 +45,7 @@ function getClues(combination, guess) {
       }
     }
   }
+  return [reds, whites];
 }
 
 // function getClues(combination, guess) {
