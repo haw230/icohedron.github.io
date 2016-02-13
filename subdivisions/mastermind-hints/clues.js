@@ -36,21 +36,38 @@ function getClues(combination, guess) {
   for (var i = 0; i < guess.length; i++) {
     if (guess[i] == combination[i]) {
       reds++;
+      continue;
     }
-  }
-  var processed = [];
-  for (var i = 0; i < combination.length; i++) {
     for (var j = 0; j < guess.length; j++) {
-      if (combination[i] == guess[j] && processed.indexOf(j) == -1) {
-        processed.push(j);
+      if (guess[i] == combination[j]) {
         whites++;
-        break;
+        continue;
       }
     }
   }
-  whites -= reds;
-  return [reds, whites];
 }
+
+// function getClues(combination, guess) {
+//   var reds = 0;
+//   var whites = 0;
+//   for (var i = 0; i < guess.length; i++) {
+//     if (guess[i] == combination[i]) {
+//       reds++;
+//     }
+//   }
+//   var processed = [];
+//   for (var i = 0; i < combination.length; i++) {
+//     for (var j = 0; j < guess.length; j++) {
+//       if (combination[i] == guess[j] && processed.indexOf(j) == -1) {
+//         processed.push(j);
+//         whites++;
+//         break;
+//       }
+//     }
+//   }
+//   whites -= reds;
+//   return [reds, whites];
+// }
 
 function update() {
   var combination = [
